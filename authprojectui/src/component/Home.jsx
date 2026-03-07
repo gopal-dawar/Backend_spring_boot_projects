@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -39,19 +39,19 @@ const Home = () => {
         </p>
 
         <div className="space-x-4">
-          <Link
-            to="/login"
+          <button
+            onClick={() => navigate("/addproduct")}
             className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200"
           >
-            Login
-          </Link>
+            Add Product
+          </button>
 
-          <Link
-            to="/register"
+          <button
+            onClick={() => navigate("/productlist")}
             className="bg-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-700"
           >
-            Register
-          </Link>
+            Product List
+          </button>
         </div>
       </div>
     </div>
